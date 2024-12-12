@@ -28,7 +28,7 @@ public class CustomerTest {
     @Test
     @DisplayName("customer name should not be null")
     void test2() {
-        assertThrows(IllegalArgumentException.class, () ->
+        assertThrows(NullPointerException.class, () ->
                 customer = new Customer(null)
         );
     }

@@ -11,9 +11,7 @@ public class Customer {
     private final List<Rental> rentals = new ArrayList<>();
 
     public Customer(String name) {
-        if (Objects.isNull(name)) {
-            throw new IllegalArgumentException("Customer name must not be null");
-        }
+        Objects.requireNonNull(name);
         this.name = name;
     }
 
